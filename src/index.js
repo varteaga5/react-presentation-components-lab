@@ -1,13 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import SimpleComponent from './components/SimpleComponent';
-import SimplerComponent from './components/SimplerComponent';
+import SimpleComponent from "./components/SimpleComponent";
+import SimplerComponent from "./components/SimplerComponent";
 
 ReactDOM.render(
   <div>
     <SimpleComponent />
-    <SimplerComponent handleClick={undefined} />
+    <br />
+    <SimplerComponent
+      handleClick={(e) => {
+        console.log("timmay");
+      }}
+    />
   </div>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
